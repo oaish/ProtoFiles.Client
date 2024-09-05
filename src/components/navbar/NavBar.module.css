@@ -1,0 +1,67 @@
+.navbar {
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
+    left: 50%;
+    display: flex;
+    translate: -50%;
+    align-items: center;
+    border-radius: 15px;
+    padding-block: 20px;
+    background-color: #111;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navItem,
+.navItem .icon {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.title {
+    display: none;
+}
+
+.active {
+    color: #fff;
+}
+
+.inactive {
+    color: #aaa;
+}
+
+.drawer {
+    position: absolute;
+    bottom: 64px;
+    width: 90%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    background-color: #999;
+    justify-content: center;
+    border-radius: 15px 15px 0 0;
+    transition: height 0.3s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.drawer.active {
+    height: 500%;
+}
+
+.drawer.inactive {
+    height: 0;
+}
+
+@media (min-width: 641px) {
+    .navbar {
+
+    }
+
+    .title {
+        display: block;
+    }
+}

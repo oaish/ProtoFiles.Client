@@ -83,6 +83,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #222;
 }
 
 body {
@@ -103,5 +104,19 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 74px;
+  background-color: #222;
+}
+
+@media (min-width: 641px) {
+  main {
   }
 }
