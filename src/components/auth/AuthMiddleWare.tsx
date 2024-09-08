@@ -12,6 +12,8 @@ export default function AuthMiddleWare() {
     const [, setUser] = useAtom(userAtom);
 
     const isLoggedIn = useCallback(async () => {
+        if (!localStorage) return
+
         const jwt = localStorage.getItem("jwt");
         const user = JSON.parse(localStorage.getItem("user") as string);
         const res = await fetch(`${API_URI}/User/VerifyJwt?username=${user?.username}`, {

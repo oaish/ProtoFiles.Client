@@ -58,7 +58,7 @@ export function PinInput() {
 
         if (str.length < 4) return;
 
-        let username: string;
+        let username: string = "";
 
         if (!user) {
             if (localStorage)
