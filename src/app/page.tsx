@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <div>
+import HomeBody from "@/components/home/HomeBody";
 
-    </div>
-  );
+export default function Home() {
+  return <HomeBody />;
 }

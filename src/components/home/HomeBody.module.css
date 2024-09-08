@@ -1,0 +1,69 @@
+.homeLayout {
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard {
+    width: 100%;
+    gap: 15px;
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    height: max-content;
+    flex-direction: column;
+    background-color: rebeccapurple;
+    background-image: url('/images/striped.png');
+    box-shadow: inset -2px -2px .5rem rgba(0, 0, 0, 0.5);
+}
+
+.dbItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: max-content;
+    gap: 10px;
+}
+
+.dbItemIcon {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 3rem;
+    background-color: #fff1;
+    border: 1px solid  #fff3;
+    backdrop-filter: blur(10px);
+}
+
+.dbItemContent {
+    height: 48px;
+    flex-grow: 1;
+    display: flex;
+    padding: 0 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff3;
+    border: 1px solid  #fff3;
+    backdrop-filter: blur(10px);
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.desc {
+    font-size: .8rem;
+    color: #ccc;
+}
+
+.underConstruction {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: inset -2px -2px .5rem rgba(0, 0, 0, 0.5);
+    background: repeating-linear-gradient(45deg, #664f00, #664f00 20px, #272727 20px, #272727 40px);
+}

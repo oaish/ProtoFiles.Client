@@ -1,0 +1,15 @@
+.vaultLockedBase {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 10px;
+    padding: 30px;
+    display: flex;
+    font-size: 5rem;
+    border-radius: 20px;
+    width: max-content;
+    align-items: center;
+    translate: -50% -75%;
+    flex-direction: column;
+    justify-content: center;
+}
