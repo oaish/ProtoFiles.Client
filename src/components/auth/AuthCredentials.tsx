@@ -6,7 +6,6 @@ import {useSlider} from "@/components/shared/Provider";
 import {FaEye, FaEyeSlash} from "react-icons/fa";
 import {MdErrorOutline} from "react-icons/md";
 import {IoIosCloseCircle} from "react-icons/io";
-import {API_URI} from "@/lib/declarations";
 import {ImSpinner5, ImSpinner9} from "react-icons/im";
 import {useAtom} from "jotai/index";
 import {userAtom} from "@/lib/atom";
@@ -56,7 +55,7 @@ function LoginForm({setMode}: { setMode: Function }) {
             return;
         }
 
-        const res = await fetch(`${API_URI}/User/Login`, {
+        const res = await fetch(`${process.env.apiUrl}/api/User/Login`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -163,7 +162,7 @@ function RegisterForm({setMode}: { setMode: Function }) {
             return;
         }
 
-        const res = await fetch(`${API_URI}/User/Register`, {
+        const res = await fetch(`${process.env.apiUrl}/api/User/Register`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

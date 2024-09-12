@@ -1,1 +1,0 @@
-export const API_URI: string = "https://localhost:7172/api";

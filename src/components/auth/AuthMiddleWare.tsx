@@ -3,7 +3,6 @@
 import {useCallback, useEffect} from "react";
 import {useSlider} from "@/components/shared/Provider";
 import AuthCredentials from "@/components/auth/AuthCredentials";
-import {API_URI} from "@/lib/declarations";
 import {useAtom} from "jotai/index";
 import {userAtom} from "@/lib/atom";
 
@@ -16,7 +15,7 @@ export default function AuthMiddleWare() {
 
         const jwt = localStorage.getItem("jwt");
         const user = JSON.parse(localStorage.getItem("user") as string);
-        const res = await fetch(`${API_URI}/User/VerifyJwt?username=${user?.username}`, {
+        const res = await fetch(`${process.env.apiUrl}/api/User/VerifyJwt?username=${user?.username}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
