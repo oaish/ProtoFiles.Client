@@ -1,5 +1,5 @@
+import CreateBody from "@/components/create/CreateBody";
+
 export default function Home() {
-    return <>
-        <h1>Create</h1>
-    </>;
+    return <CreateBody/>;
 }

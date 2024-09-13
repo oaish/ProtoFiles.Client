@@ -113,6 +113,10 @@ main {
     height: calc(100vh - 175px);
 }
 
+:focus {
+    outline: none;
+}
+
 @media (min-width: 641px) {
     main {
     }

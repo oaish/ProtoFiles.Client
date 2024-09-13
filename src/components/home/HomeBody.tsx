@@ -29,11 +29,11 @@ export default function HomeBody() {
 function DashBoard() {
     return (
         <div className={s.dashboard}>
-            <Link className={s.dbItem} href="/issued">
+            <Link className={s.dbItem} href="/docs">
                 <PiHardDrivesFill className={s.dbItemIcon}/>
                 <div className={s.dbItemContent}>
-                    <div className={s.title}>Issued Documents</div>
-                    <div className={s.desc}>Check your files in the cloud</div>
+                    <div className={s.title}>Documents Manager</div>
+                    <div className={s.desc}>Manage your files in the cloud</div>
                 </div>
             </Link>
             <Link className={s.dbItem} href="/create">
@@ -47,7 +47,7 @@ function DashBoard() {
                 <PiVaultFill className={s.dbItemIcon}/>
                 <div className={s.dbItemContent}>
                     <div className={s.title}>Vault Manager</div>
-                    <div className={s.desc}>Save your secrets to cloud</div>
+                    <div className={s.desc}>Manage your secrets in cloud</div>
                 </div>
             </Link>
         </div>

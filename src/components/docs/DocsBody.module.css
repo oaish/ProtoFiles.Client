@@ -1,0 +1,41 @@
+.docsContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    height: calc(100% - 10px);
+    background-image: url('/images/striped.png');
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header div {
+    display: flex;
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    align-items: center;
+    background-color: rebeccapurple;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.title {
+    border-radius: 0 0 15px 0;
+}
+
+.switch {
+    border-radius: 0 0 0 15px;
+}
+
+.container {
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.2);
+}

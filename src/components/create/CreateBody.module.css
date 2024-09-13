@@ -1,0 +1,191 @@
+.createContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    height: calc(100% - 10px);
+    border: 1px solid rebeccapurple;
+    background-image: url('/images/striped.png');
+}
+
+button.switch {
+    all: unset;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    justify-content: space-between;
+    background-color: rebeccapurple;
+}
+
+.header div {
+    display: flex;
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    align-items: center;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.header .title {
+    border-radius: 0 0 15px 0;
+}
+
+.header .switch {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 0 0 0 15px;
+}
+
+.container {
+    height: calc(100% - 45px);
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.createForm {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.coverImageContainer, .inputContainer {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.coverImageContainer {
+    height: 100px;
+}
+
+.coverImage {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: rebeccapurple;
+}
+
+.coverImageEdit {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.coverImageEdit .text {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.coverImageEdit button {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    border: none;
+    gap: 5px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: all .1s ease;
+    pointer-events: none;
+    background-color: rebeccapurple;
+}
+
+.coverImageEdit button:hover:after, .submitButton:hover:after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.coverImageEdit button:active, .submitButton:active {
+    scale: 0.975;
+}
+
+.coverImageEdit button input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: all;
+}
+
+.inputContainer {
+    position: relative;
+    height: 50px;
+}
+
+.inputContainer .content,
+.inputContainer input {
+    width: 100%;
+    height: 100%;
+}
+
+.inputContainer input[type="text"],
+.inputContainer input::file-selector-button {
+    border: none;
+    outline: none;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.inputContainer input::file-selector-button {
+    background-color: rebeccapurple;
+}
+
+.inputContainer input[type="text"] {
+    background-color: #222;
+    border-radius: 8px;
+}
+
+
+.inputContainer .title,
+.coverImageContainer .title {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding: 3px 10px;
+    font-size: 9px;
+    font-weight: bold;
+    translate: 0 -100%;
+    border-radius: 7px 7px 0 0;
+    backdrop-filter: blur(10px);
+    background-color: rebeccapurple;
+}
+
+.submitButton {
+    position: relative;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: all .1s ease;
+    background-color: rebeccapurple;
+}
+
+.createContainer button {
+    cursor: pointer;
+}

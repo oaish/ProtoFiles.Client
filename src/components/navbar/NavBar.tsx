@@ -48,11 +48,27 @@ export const NavBar = () => {
 
     return (
         <div className={s.navbar}>
-            <NavItem icon={<BsFillHouseFill/>} title="Home" link="/"/>
-            <NavItem icon={<FaAward/>} title="Issued" link="/issued"/>
-            <NavItem icon={<FaSquarePlus/>} title="Create" link="/create"/>
+            <NavItem icon={<BsFillHouseFill/>} title="Home" link="/"
+                     action={() => {
+                         if (isProfileDrawerOpen) setProfileDrawerOpen(false);
+                         if (isPinDrawerOpen) setPinDrawerOpen(false);
+                     }}
+            />
+            <NavItem icon={<FaAward/>} title="Issued" link="/docs"
+                     action={() => {
+                         if (isProfileDrawerOpen) setProfileDrawerOpen(false);
+                         if (isPinDrawerOpen) setPinDrawerOpen(false);
+                     }}
+            />
+            <NavItem icon={<FaSquarePlus/>} title="Create" link="/create"
+                     action={() => {
+                         if (isProfileDrawerOpen) setProfileDrawerOpen(false);
+                         if (isPinDrawerOpen) setPinDrawerOpen(false);
+                     }}
+            />
             <NavItem icon={<RiShieldStarFill/>} title="Vault" link="/vault"
                      action={() => {
+                         if (isProfileDrawerOpen) setProfileDrawerOpen(false);
                          if (isPinDrawerOpen) setPinDrawerOpen(false);
                      }}
                      isDrawerOpen={isPinDrawerOpen}
