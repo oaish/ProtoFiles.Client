@@ -3,7 +3,9 @@
     width: 100%;
     overflow: hidden;
     border-radius: 15px;
-    height: calc(100% - 10px);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     border: 1px solid rebeccapurple;
     background-image: url('/images/striped.png');
 }
@@ -42,7 +44,6 @@ button.switch {
 
 .container {
     height: calc(100% - 45px);
-    backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -62,21 +63,43 @@ button.switch {
     display: flex;
     padding: 10px;
     border-radius: 15px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.inputContainer {
+    border-radius: 10px;
 }
 
 .coverImageContainer {
     height: 100px;
 }
 
-.coverImage {
+.coverImageBase {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex: 0 0 auto;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: center;
+    background-color: rebeccapurple;
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+img.coverImage.active {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 15px;
-    background-color: rebeccapurple;
+}
+
+div.coverImage {
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .coverImageEdit {

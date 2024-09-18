@@ -9,14 +9,14 @@
 }
 
 .bannerBody {
-    content: '';
     position: absolute;
     top: -100dvh;
+    content: '';
     left: 0;
+    z-index: 0;
     width: 100%;
     height: calc(100vh + 50px);
     border-radius: 0 0 15px 15px;
-    z-index: 0;
     background-color: rebeccapurple;
     box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.5);
     background-image:
@@ -29,13 +29,13 @@
     z-index: 1;
     top: 20px;
     left: 50%;
-    translate: -50%;
-    height: 60px;
-    display: flex;
     gap: 15px;
-    padding: 15px 20px;
+    display: flex;
+    padding: 15px;
+    translate: -50%;
     align-items: center;
-    border-radius: 15px;
+    height: fit-content;
+    border-radius: 10px;
     background-color: #111;
     box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.5);
 }

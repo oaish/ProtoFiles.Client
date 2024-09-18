@@ -1,10 +1,13 @@
 .docsContainer {
-    position: relative;
+    position: fixed;
     width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    height: 100dvh;
     overflow: hidden;
-    border-radius: 15px;
-    height: calc(100% - 10px);
-    background-image: url('/images/striped.png');
+    background-color: #222;
+    /*background-image: url('/images/striped.png');*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -16,26 +19,65 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.header div {
+.header div, .header a {
     display: flex;
-    padding: 10px 15px;
     font-size: 1.3rem;
     font-weight: bold;
+    padding: 10px 15px;
     align-items: center;
     background-color: rebeccapurple;
     font-family: 'Brush Script MT', cursive;
 }
 
 .title {
-    border-radius: 0 0 15px 0;
+    border-radius: 0 0 15px 15px;
 }
 
 .switch {
     border-radius: 0 0 0 15px;
 }
 
+.back {
+    border-radius: 0 0 15px 0;
+}
+
 .container {
-    height: 100%;
+    gap: 20px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    height: calc(100% - 46px);
     backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.docItemBase {
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    height: 58px;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+    transition: height 0.4s ease;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.expanded {
+    height: 200px;
+}
+
+.coverImageBase {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: rebeccapurple;
+}
+
+.coverImage {
+    width: 80%;
 }

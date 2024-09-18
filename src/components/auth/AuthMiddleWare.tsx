@@ -39,6 +39,7 @@ export default function AuthMiddleWare() {
     }, [handleSlider, setUser]);
 
     useEffect(() => {
+        console.log("API_URL:", process.env.apiUrl);
         handleSlider(true, <AuthCredentials/>);
         isLoggedIn().then();
     }, [handleSlider, isLoggedIn])
