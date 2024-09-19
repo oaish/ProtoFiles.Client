@@ -74,7 +74,7 @@ export default function CreateBody() {
         formData.append("userGuid", user?.id);
         formData.append("coverImage", coverImage);
 
-        const res = await fetch(`${process.env.apiUrl}/api/Drive/AddFile`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Drive/AddFile`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${jwt}`

@@ -30,7 +30,13 @@ const DocItem = () => {
             <div className={s.coverImageBase}>
                 <img src="/images/question.svg" alt="" className={s.coverImage}/>
             </div>
-
+            <div className={s.docDetails}>
+                <div className={s.title}>Title</div>
+                <div className={s.tags}>
+                    <div className={s.tag}>pdf</div>
+                </div>
+            </div>
+            <div></div>
         </div>
     </>;
 }

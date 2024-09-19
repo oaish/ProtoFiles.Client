@@ -1,8 +1,7 @@
 import {ChangeEvent, KeyboardEvent, useState} from "react";
 import s from "./PinInput.module.css"
 import {useAtom} from "jotai/index";
-import {isPinDrawerOpenAtom, isProfileDrawerOpenAtom, pinVerifiedAtom, userAtom} from "@/lib/atom";
-import {useRouter} from "next/navigation";
+import {isPinDrawerOpenAtom, pinVerifiedAtom, userAtom} from "@/lib/atom";
 
 export function PinInput() {
     const [user] = useAtom(userAtom);
@@ -66,7 +65,7 @@ export function PinInput() {
             username = user.username;
         }
 
-        const res = await fetch(`${process.env.apiUrl}/api/User/VerifyPin`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/User/VerifyPin`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

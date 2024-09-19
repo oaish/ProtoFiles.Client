@@ -15,7 +15,7 @@ export default function AuthMiddleWare() {
 
         const jwt = localStorage.getItem("jwt");
         const user = JSON.parse(localStorage.getItem("user") as string);
-        const res = await fetch(`${process.env.apiUrl}/api/User/VerifyJwt?username=${user?.username}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/User/VerifyJwt?username=${user?.username}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export default function AuthMiddleWare() {
     }, [handleSlider, setUser]);
 
     useEffect(() => {
-        console.log("API_URL:", process.env.apiUrl);
+        console.log("NEXT_PUBLIC_API_URL:", process.env.NEXT_PUBLIC_API_URL);
         handleSlider(true, <AuthCredentials/>);
         isLoggedIn().then();
     }, [handleSlider, isLoggedIn])
