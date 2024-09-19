@@ -30,10 +30,12 @@
 }
 
 .title {
+    cursor: default;
     border-radius: 0 0 15px 15px;
 }
 
 .switch {
+    cursor: pointer;
     border-radius: 0 0 0 15px;
 }
 
@@ -64,12 +66,8 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.expanded {
-    height: 200px;
-}
-
 .coverImageBase {
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -80,4 +78,60 @@
 
 .coverImage {
     width: 80%;
+}
+
+.docDetails {
+    width: 100%;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tags {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tag {
+    padding: 2px 3px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.docDetails .docTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    font-size: 14px;
+}
+
+button.tag {
+    gap: 3px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    padding: 2px 5px;
+    align-items: center;
+}
+
+button.tag svg {
+    position: relative;
+    top: 50%;
+}
+
+.viewTag {
+    background-color: #19386a;
+}
+
+.downloadTag {
+    background-color: #086c55;
+}
+
+.deleteTag {
+    background-color: crimson;
 }

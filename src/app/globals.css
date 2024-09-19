@@ -1,4 +1,10 @@
 :root {
+    --pdf-tag-color: crimson;
+    --docx-tag-color: #103f91;
+    --png-tag-color: goldenrod;
+    --jpg-tag-color: teal;
+    --gif-tag-color: indigo;
+    ---tag-color: rebeccapurple;
     --theme-color: #fff;
     --max-width: 1100px;
     --border-radius: 12px;
